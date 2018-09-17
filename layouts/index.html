@@ -1,11 +1,9 @@
-{{ partial "structure/head" . }}
+{{ partial "structure/head.html" . }}
 
 <main>
-    {{ range .Data.Pages }}
-        {{ if eq .Params.index true }}
-            {{ .Content }}
-        {{ end }}
-    {{ end }}
+
+{{ .Content }}
+
 </main>
 
-{{ partial "structure/foot" . }}
+{{ partial "structure/foot.html" . }}

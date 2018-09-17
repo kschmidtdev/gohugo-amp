@@ -1,32 +1,41 @@
 <div class="social">
+{{ $width := .width }}
+{{ $height := .height }}
+{{ with .width }}
+    {{ $width = . }}
+{{ end }}
+{{ with .height }}
+    {{ $height = . }}
+{{ end }}
+
 {{ with .twitter }}
 <amp-social-share type="twitter"
-  width="60"
-  height="44"> </amp-social-share>
+width={{ $width }}
+height={{ $height }}> </amp-social-share>
 {{ end }}
 {{ with .gplus }}
     <amp-social-share type="gplus"
-                      width="60"
-                      height="44"></amp-social-share>
+                      width={{ $width }}
+                      height={{ $height }}></amp-social-share>
 {{ end }}
 {{ with .email }}
     <amp-social-share type="email"
-                      width="60"
-                      height="44"></amp-social-share>
+    width={{ $width }}
+    height={{ $height }}></amp-social-share>
 {{ end }}
 {{ with .pinterest }}
     <amp-social-share type="pinterest"
-                      width="60"
-                      height="44"></amp-social-share>
+    width={{ $width }}
+    height={{ $height }}></amp-social-share>
 {{ end }}
 {{ with .linkedin }}
 <amp-social-share type="linkedin"
-                  width="60"
-                  height="44"></amp-social-share>
+width={{ $width }}
+height={{ $height }}></amp-social-share>
 {{ end }}
 {{ with .facebook }}
     <amp-social-share type="facebook"
-                      width="60"
-                      height="44"></amp-social-share>
+    width={{ $width }}
+    height={{ $height }}></amp-social-share>
 {{ end }}
 </div>
